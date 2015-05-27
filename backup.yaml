@@ -1,0 +1,6 @@
+# tree format
+backup_list:
+    d1: xxx
+    d2: ccc
+backup_dir:
+    x
