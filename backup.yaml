@@ -1,6 +1,11 @@
 # tree format
 backup_list:
-    d1: xxx
-    d2: ccc
+    d1: /Users/sinan
+    d2: /Users/sinan/Movies
 backup_dir:
-    x
+    /Users/Sinan/temp:
+        sd1: F
+        sd1/ssd1: F
+        sd2: F
+    #/Users/Sinan/Movies:
+
