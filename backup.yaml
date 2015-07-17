@@ -1,11 +1,6 @@
-# tree format
-backup_list:
-    d1: /Users/sinan
-    d2: /Users/sinan/Movies
+dest_dir: backup_
 backup_dir:
-    /Users/Sinan/temp:
-        sd1: F
-        sd1/ssd1: F
-        sd2: F
-    #/Users/Sinan/Movies:
+    /Users/sinan/Dropbox/SSN:
+        Books: F
+        Podcasts: F
 
