@@ -57,7 +57,7 @@ class backup:
             print '[pass]'
 
     def writelog( self, text ):
-        logfile = open(self.dest + "/log", "a")
+        logfile = open("/tmp" + "/log", "a")
         print >> logfile, text
         logfile.close()
 
@@ -77,7 +77,7 @@ class backup:
             cmd = 'rsync -av '
             cmd = cmd + backdir + ' ' +  self.dest + ' '
             for exd in self.excludelist: cmd = cmd +' --exclude ' + exd
-            cmd = cmd + ' >> ' + self.dest + '/log'
+            cmd = cmd + ' >> ' + '/tmp' + '/log'
             os.system(cmd)
 
         self.writelog( '[Finish]' )
