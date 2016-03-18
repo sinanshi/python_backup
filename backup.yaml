@@ -1,6 +1,3 @@
-dest_dir: sinan@shisinan.eu:Data
+dest_dir: sinan@shisinan.eu:/home/sinan
 backup_dir:
-    /Users/sinan/Dropbox/SSN:
-        Books: F
-        Podcasts: F
-
+  /Users/sinan/Data: T

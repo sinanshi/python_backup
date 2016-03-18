@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BACKSRC="/Users/sinan/workspace/software/python_backup"
+python $BACKSRC/backup.py $BACKSRC/backup.yaml
+
+
+

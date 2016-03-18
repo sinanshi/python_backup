@@ -20,9 +20,9 @@ def getDirList(dic):
 
 def getParam(param_file):
     #get chosen file list from yaml file
-    path = os.path.dirname(os.path.realpath(__file__))
+    #path = os.path.dirname(os.path.realpath(__file__))
     try:
-        f = open(path + '/' + param_file )
+        f = open( param_file )
     except IOError:
         sys.exit('[Error]: '+param_file+' does not exist!')
         
@@ -57,7 +57,7 @@ class backup:
             print '[pass]'
 
     def writelog( self, text ):
-        logfile = open("/tmp" + "/log", "a")
+        logfile = open("/tmp/sync.log", "a")
         print >> logfile, text
         logfile.close()
 
@@ -74,10 +74,10 @@ class backup:
 
         for backdir in self.backlist:
             self.writelog( '--> Backup: ' + backdir )
-            cmd = 'rsync -av '
+            cmd = 'rsync -av --copy-links --delete-after '
             cmd = cmd + backdir + ' ' +  self.dest + ' '
             for exd in self.excludelist: cmd = cmd +' --exclude ' + exd
-            cmd = cmd + ' >> ' + '/tmp' + '/log'
+            cmd = cmd + ' >> ' + '/tmp' + '/sync.log'
             os.system(cmd)
 
         self.writelog( '[Finish]' )
